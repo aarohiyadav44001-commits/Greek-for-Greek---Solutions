@@ -31,38 +31,13 @@ n = 2
 - **Expected Time Complexity:** O(n)
 - **Expected Auxiliary Space Complexity:** O(1)
 
-### Accepted Solutions (2)
+### Accepted Solutions (1)
 
 #### Solution 1 (Java)
 
 - **Submitted:** 2026-10-03 18:29:40
 - **Status:** Correct
 - **Marks:** 0
-
-```java
-class Solution {
-    public int countFriendsPairings(int n) {
-        if(n==1 || n==2){
-            return n;
-        }
-        // Single
-        int fnm1 = countFriendsPairings(n-1);
-        //Pair
-        int fnm2 = countFriendsPairings(n-2);
-        int pairWays = (n-1) * fnm2;
-        
-        //TotalPair
-        int totalWays = fnm1 + pairWays;
-        return totalWays;
-    }
-}
-```
-
-#### Solution 2 (Java)
-
-- **Submitted:** 2026-10-03 18:28:50
-- **Status:** Correct
-- **Marks:** 4
 
 ```java
 class Solution {
