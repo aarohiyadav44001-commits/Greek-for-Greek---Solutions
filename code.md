@@ -46,9 +46,5 @@ class Solution {
         return true;
     }
 }
-        return true;
-    }
-}
-```
 
 *Generated on: 10/13/2026, 7:09:01 PM*
