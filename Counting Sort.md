@@ -41,42 +41,8 @@ eeeefggkkorss
 - **Expected Time Complexity:** O(n)
 - **Expected Auxiliary Space Complexity:** O(n)
 
-### Accepted Solutions (2)
-
+### Accepted Solutions (1)
 #### Solution 1 (Java)
-
-- **Submitted:** 2026-10-15 19:32:24
-- **Status:** Correct
-- **Marks:** 0
-
-```java
-class Solution {
-    public static String countSort(String s) {
-        int n = s.length();
-        if (n <= 1) return s;
-
-        int max = 255;
-        int[] count = new int[max + 1];
-
-        for (int i = 0; i < n; i++) {
-            count[s.charAt(i)]++;
-        }
-
-        StringBuilder result = new StringBuilder();
-
-        for (int i = 0; i <= max; i++) {
-            while (count[i] > 0) {
-                result.append((char) i);
-                count[i]--;
-            }
-        }
-
-        return result.toString();
-    }
-}
-```
-
-#### Solution 2 (Java)
 
 - **Submitted:** 2026-10-13 19:59:47
 - **Status:** Correct
